@@ -1,0 +1,3 @@
+﻿  fixedVulnerable.cpp
+C:\Users\defra\source\repos\RevEngProject1\RevEngProject1\fixedVulnerable.cpp(126): warning C4715: 'CheckUserPermissionAccess': not all control paths return a value
+  RevEngProject1.vcxproj -> C:\Users\defra\source\repos\RevEngProject1\x64\Debug\RevEngProject1.exe
