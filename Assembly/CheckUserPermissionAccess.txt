@@ -1,0 +1,142 @@
+   
+   |0xf6a <_Z25Check>          push   %rbp                                                                                                                  
+   |0xf6b <_Z25Check+1>        mov    %rsp,%rbp
+
+//CheckUserPermissionAccess()                                                                                                             
+   │0xf6e <_Z25Check+4>        push   %rbx
+
+// enter username and password                                                                                                                  
+   │0xf6f <_Z25Check+5>        sub    $0x48,%rsp                                                                                                            
+   │0xf73 <_Z25Check+9>        mov    %fs:0x28,%rax                                                                                                         
+   │0xf7c <_Z25Check+18>       mov    %rax,-0x18(%rbp)                                                                                                      
+   │0xf80 <_Z25Check+22>       xor    %eax,%eax
+string;                                                                                                             │
+   │0xf82 <_Z25Check+24>       lea    -0x45(%rbp),%rax                                                                                                      
+   │0xf86 <_Z25Check+28>       mov    %rax,%rdi                                                                                                             
+   │0xf89 <_Z25Check+31>       callq  0xd20 <_ZNSaIcEC1Ev@plt>	
+
+std::allocator<char>::allocator()     
+
+string = ""                                                                                 
+   │0xf8e <_Z25Check+36>       lea    -0x45(%rbp),%rdx		                                                                                                      
+   │0xf92 <_Z25Check+40>       lea    -0x40(%rbp),%rax                                                                                                      
+   │0xf96 <_Z25Check+44>       lea    0x588(%rip),%rsi        # 0x1525                                                                                      
+   │0xf9d <_Z25Check+51>       mov    %rax,%rdi
+                                                                   
+cout << "Enter your username: "                                          
+   │0xfa0 <_Z25Check+54>       callq  0xce0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EPKcRKS3_@plt> 
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >
+::basic_string(char const*, std::allocator<char> const&)
+
+   │0xfa5 <_Z25Check+59>       lea    -0x45(%rbp),%rax                                                                                                      
+   │0xfa9 <_Z25Check+63>       mov    %rax,%rdi                                                                                                            
+   │0xfac <_Z25Check+66>       callq  0xcb0 <_ZNSaIcED1Ev@plt>   <std::allocator<char>::~allocator()> 
+                                                                                        
+   │0xfb1 <_Z25Check+71>       movl   $0x0,-0x44(%rbp)                                                                                                      
+   │0xfb8 <_Z25Check+78>       lea    0x567(%rip),%rsi           # 0x1526                                                                                      
+   │0xfbf <_Z25Check+85>       lea    0x2010da(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+
+<< endl;
+   │0xfc6 <_Z25Check+92>       callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+std::basic_ostream<char, std::char_traits<char> >& 
+std::operator<< <std::char_traits<char> >
+(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+
+username                                                 
+   │0xfcb <_Z25Check+97>       lea    0x20130e(%rip),%rsi        # 0x2022e0 <username>              
+cin >>                                                        
+   │0xfd2 <_Z25Check+104>      lea    0x2011e7(%rip),%rdi        # 0x2021c0 <_ZSt3cin@@GLIBCXX_3.4>
+
+cin >> username;
+   │0xfd9 <_Z25Check+111>      callq  0xc40 <_ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_PS3_@plt>
+std::basic_istream<char, std::char_traits<char> >& 
+std::operator>><char, std::char_traits<char> >
+(std::basic_istream<char, std::char_traits<char> >&, char*)
+                                              
+   │0xfde <_Z25Check+116>      lea    0x558(%rip),%rsi           # 0x153d                                                        
+    0xfe5 <_Z25Check+123>      lea    0x2010b4(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4> 
+
+cout << "Enter your password: \n"                                                  
+   │0xfec <_Z25Check+130>      callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>                                       
+std::basic_ostream<char, std::char_traits<char> >& 
+std::operator<< <std::char_traits<char> >
+(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+
+
+answer
+   |0xff1 <_Z25Check+135>      lea    -0x40(%rbp),%rax                                                                                                      
+   |0xff5 <_Z25Check+139>      mov    %rax,%rsi                                                                                                             
+   |0xff8 <_Z25Check+142>      lea    0x2011c1(%rip),%rdi        # 0x2021c0 <_ZSt3cin@@GLIBCXX_3.4>
+
+cin >> password;                                                        
+   |0xfff <_Z25Check+149>      callq  0xcd0 <_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE@plt>
+
+std::basic_istream<char, std::char_traits<char> >& 
+std::operator>><char, std::char_traits<char>, std::allocator<char> >
+(std::basic_istream<char, std::char_traits<char> >&
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)
+
+   │0x1004 <_Z25Check+154>     lea    -0x40(%rbp),%rax                                                                                                      
+   │0x1008 <_Z25Check+158>     lea    0x545(%rip),%rsi        # 0x1554                                                                                      
+   │0x100f <_Z25Check+165>     mov    %rax,%rdi
+
+compare input with password
+                                                                                                             
+   │0x1012 <_Z25Check+168>     callq  0xc50 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc@plt>
+
+std::__cxx11::basic_string<char, std::char_traits<char>, 
+std::allocator<char> >::compare(char const*) const
+                                        │
+   │0x1017 <_Z25Check+173>     mov    %eax,-0x44(%rbp)
+
+if (answer.compare(password) != 0)                                                                                                      
+   │0x101a <_Z25Check+176>     cmpl   $0x0,-0x44(%rbp)                                                                                                      
+   │0x101e <_Z25Check+180>     jne    0x1027 <_Z25Check+189>
+
+else ( %ebx = 1 )                                                                    
+   │0x1020 <_Z25Check+182>     mov    $0x1,%ebx                                                                                                             
+   │0x1025 <_Z25Check+187>     jmp    0x102c <_Z25Check+194>
+
+(%ebx = 2 && (%rax ->&of -40(%rbp))                                                                        
+   │0x1027 <_Z25Check+189>     mov    $0x2,%ebx                                                                                                             
+   │0x102c <_Z25Check+194>     lea    -0x40(%rbp),%rax
+
+&of-40(%rbp) into destination                                                                                                     
+   │0x1030 <_Z25Check+198>     mov    %rax,%rdi
+
+~basic_string();                                                                                                            
+   │0x1033 <_Z25Check+201>     callq  0xc70 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@plt>
+
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+
+                               
+   │0x1038 <_Z25Check+206>     mov    %ebx,%eax                                                                                                             
+   │0x103a <_Z25Check+208>     mov    -0x18(%rbp),%rcx                                                                                                      
+   │0x103e <_Z25Check+212>     xor    %fs:0x28,%rcx
+    0x1047 <_Z25Check+221>     je     0x1084 <_Z25Check+282>                                                                           
+   │0x1049 <_Z25Check+223>     jmp    0x107f <_Z25Check+277>
+                                                                           
+   │0x104b <_Z25Check+225>     mov    %rax,%rbx                                                                                                             
+   │0x104e <_Z25Check+228>     lea    -0x45(%rbp),%rax                                                                                                     
+   │0x1052 <_Z25Check+232>     mov    %rax,%rdi                                                                                                             
+   │0x1055 <_Z25Check+235>     callq  0xcb0 <_ZNSaIcED1Ev@plt> std::allocator<char>::~allocator()             
+                                                                                 
+   │0x105a <_Z25Check+240>     mov    %rbx,%rax                                                                                                             
+   │0x105d <_Z25Check+243>     mov    %rax,%rdi                                                                                                             
+   │0x1060 <_Z25Check+246>     callq  0xd10 <_Unwind_Resume@plt>	<LocalVariable>                                                                                           
+   │0x1065 <_Z25Check+251>     mov    %rax,%rbx                                                                                                             
+   │0x1068 <_Z25Check+254>     lea    -0x40(%rbp),%rax                                                                                                      
+   │0x106c <_Z25Check+258>     mov    %rax,%rdi                                                                                                             
+   │0x106f <_Z25Check+261>     callq  0xc70 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@plt>
+
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+                                                 
+   │0x1074 <_Z25Check+266>     mov    %rbx,%rax                                                                                                             
+   │0x1077 <_Z25Check+269>     mov    %rax,%rdi                                                                                                            
+   │0x107a <_Z25Check+272>     callq  0xd10 <_Unwind_Resume@plt>                                                                                            
+   │0x107f <_Z25Check+277>     callq  0xcc0 <__stack_chk_fail@plt>                                                                                          
+   │0x1084 <_Z25Check+282>     add    $0x48,%rsp                                                                                                            
+   │0x1088 <_Z25Check+286>     pop    %rbx                                                                                                                  
+   │0x1089 <_Z25Check+287>     pop    %rbp                                                                                                                  
+   │0x108a <_Z25Check+288>     retq 
+

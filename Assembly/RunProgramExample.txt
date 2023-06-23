@@ -1,0 +1,67 @@
+Hello! Welcome to our Investment Company
+Enter your username:
+ 
+>>name
+
+Enter your password: 
+
+>>123
+
+What would you like to do?
+DISPLAY the client list (enter 1)
+CHANGE a client's choice (enter 2)
+Exit the program.. (enter 3)
+
+>>1
+
+You chose 1
+  Client's Name    Service Selected (1 = Brokerage, 2 = Retirement)
+1. Bob Jones selected option 1
+2. Sarah Davis selected option 2
+3. Amy Friendly selected option 1
+4. Johnny Smith selected option 1
+5. Carol Spears selected option 2
+
+What would you like to do?
+DISPLAY the client list (enter 1)
+CHANGE a client's choice (enter 2)
+Exit the program.. (enter 3)
+
+What would you like to do?
+DISPLAY the client list (enter 1)
+CHANGE a client's choice (enter 2)
+Exit the program.. (enter 3)
+
+>>2
+
+You chose 2
+Enter the number of the client that you wish to change
+
+>>1
+
+Please enter the client's new service choice (1 = Brokerage, 2 = Retirement)
+
+>>1
+
+What would you like to do?
+DISPLAY the client list (enter 1)
+CHANGE a client's choice (enter 2)
+Exit the program.. (enter 3)
+
+>>3
+
+You chose 3
+[Inferior 1 (process 289) exited normally]
+
+Hello! Welcome to our Investment Company
+Enter your username: 
+>>name
+
+Enter your password: 
+
+>>122
+
+Invalid Password. Please try again
+Enter your username: 
+
+

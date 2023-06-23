@@ -1,0 +1,118 @@
+0x0000000000000000  main
+0x0000000000000120  CheckUserPermissionAccess()
+0x0000000000000241  DisplayInfo()
+0x000000000000042d  ChangeCustomerChoice()
+0x00000000000004fb  __static_initialization_and_destruction_0(int, int)
+0x0000000000000544  _GLOBAL__sub_I_username
+
+main:
+   0x0000000000000000 <+0>:     push   %rbp
+   0x0000000000000001 <+1>:     mov    %rsp,%rbp
+
+// load strings and print
+   0x0000000000000004 <+4>:     lea    0x0(%rip),%rsi        # 0xb <main+11>
+   0x000000000000000b <+11>:    lea    0x0(%rip),%rdi        # 0x12 <main+18>
+
+// cout << "Welcome to our Investment Company" << endl;
+   0x0000000000000012 <+18>:    callq  0x17 <main+23>
+// call CheckUserPermissionAccess()
+   0x0000000000000017 <+23>:    callq  0x1c <main+28>
+
+// answer; answer;
+   0x000000000000001c <+28>:    mov    %eax,0x0(%rip)       <answer> # 0x22 <main+34>
+   0x0000000000000022 <+34>:    mov    0x0(%rip),%eax       <answer> # 0x28 <main+40>
+
+// validate user credentials
+   0x0000000000000028 <+40>:    cmp    $0x1,%eax
+// if equal (if VALID)
+   0x000000000000002b <+43>:    je     0x40 <main+64>
+
+// cout 
+   0x000000000000002d <+45>:    lea    0x0(%rip),%rsi        # 0x34 <main+52>
+   0x0000000000000034 <+52>:    lea    0x0(%rip),%rdi        # 0x3b <main+59>
+   0x000000000000003b <+59>:    callq  0x40 <main+64>
+   0x0000000000000040 <+64>:    mov    0x0(%rip),%eax        # 0x46 <main+70>
+
+// Validate
+   0x0000000000000046 <+70>:    cmp    $0x1,%eax
+// if valid, continue to 77
+   0x0000000000000049 <+73>:    je     0x4d <main+77>
+// else display "invalid password" message;
+// send back to line 23
+   0x000000000000004b <+75>:    jmp    0x17 <main+23>
+
+// cout << "What would you like to do?" << endl;
+   0x000000000000004d <+77>:    lea    0x0(%rip),%rsi        # 0x54 <main+84>
+   0x0000000000000054 <+84>:    lea    0x0(%rip),%rdi        # 0x5b <main+91>
+   0x000000000000005b <+91>:    callq  0x60 <main+96>
+
+// cout << "DISPLAY the client list (enter 1)
+   0x0000000000000060 <+96>:    lea    0x0(%rip),%rsi        # 0x67 <main+103>
+   0x0000000000000067 <+103>:   lea    0x0(%rip),%rdi        # 0x6e <main+110>
+#cout string
+   0x000000000000006e <+110>:   callq  0x73 <main+115>
+
+// cout << "CHANGE the client's choice (enter 2) " << endl;
+   0x0000000000000073 <+115>:   lea    0x0(%rip),%rsi        # 0x7a <main+122>
+   0x000000000000007a <+122>:   lea    0x0(%rip),%rdi        # 0x81 <main+129>
+#cout string
+   0x0000000000000081 <+129>:   callq  0x86 <main+134>
+
+// cout << "Exit the program.. (enter 3)" << endl;
+   0x0000000000000086 <+134>:   lea    0x0(%rip),%rsi        # 0x8d <main+141>
+   0x000000000000008d <+141>:   lea    0x0(%rip),%rdi        # 0x94 <main+148>
+#cout string
+   0x0000000000000094 <+148>:   callq  0x99 <main+153>
+
+// cin >> choice;		
+   0x0000000000000099 <+153>:   lea    0x0(%rip),%rsi        <choice> # 0xa0 <main+160>
+   0x00000000000000a0 <+160>:   lea    0x0(%rip),%rdi        # 0xa7 <main+167> # 0x5555556021c0 <_ZSt3cin@@GLIBCXX_3.4> 
+#cin is called here
+   0x00000000000000a7 <+167>:   callq  0xac <main+172>		<_ZNSirsERi@plt> 
+
+
+
+   0x00000000000000ac <+172>:   lea    0x0(%rip),%rsi        # 0xb3 <main+179>
+   0x00000000000000b3 <+179>:   lea    0x0(%rip),%rdi        # 0xba <main+186>
+   0x00000000000000ba <+186>:   callq  0xbf <main+191>		
+   0x00000000000000bf <+191>:   mov    %rax,%rdx
+
+// choice;
+   0x00000000000000c2 <+194>:   mov    0x0(%rip),%eax        <choice> # 0xc8 <main+200>
+   0x00000000000000c8 <+200>:   mov    %eax,%esi
+   0x00000000000000ca <+202>:   mov    %rdx,%rdi
+   0x00000000000000cd <+205>:   callq  0xd2 <main+210>
+
+   0x00000000000000d2 <+210>:   mov    %rax,%rdx
+   0x00000000000000d5 <+213>:   mov    0x0(%rip),%rax        # 0xdc <main+220>
+   0x00000000000000dc <+220>:   mov    %rax,%rsi
+   0x00000000000000df <+223>:   mov    %rdx,%rdi
+
+// cout << "You chose " << choice << endl;
+   0x00000000000000e2 <+226>:   callq  0xe7 <main+231>		<choice>
+   0x00000000000000e7 <+231>:   mov    0x0(%rip),%eax        # 0xed <main+237> move to %eax
+   0x00000000000000ed <+237>:   cmp    $0x1,%eax			compare to %eax to $1
+// go to 249 if not equal; 
+// else go to #242
+   0x00000000000000f0 <+240>:   jne    0xf9 <main+249>
+
+// call DisplayInfo() 
+   0x00000000000000f2 <+242>:   callq  0xf7 <main+247>		<DisplayInfo()>
+   0x00000000000000f7 <+247>:   jmp    0x109 <main+265>
+   0x00000000000000f9 <+249>:   mov    0x0(%rip),%eax        <choice> # 0xff <main+255>
+   0x00000000000000ff <+255>:   cmp    $0x2,%eax
+   0x0000000000000102 <+258>:   jne    0x109 <main+265>		
+
+// call ChangeCustomerChoice() function
+   0x0000000000000104 <+260>:   callq  0x109 <main+265>
+
+   0x0000000000000109 <+265>:   mov    0x0(%rip),%eax        <choice> # 0x10f <main+271>
+   0x000000000000010f <+271>:   cmp    $0x3,%eax
+   0x0000000000000112 <+274>:   je     0x119 <main+281>
+
+   0x0000000000000114 <+276>:   jmpq   0x4d <main+77>
+
+   0x0000000000000119 <+281>:   mov    $0x0,%eax
+   0x000000000000011e <+286>:   pop    %rbp
+   0x000000000000011f <+287>:   retq   
+End of main:

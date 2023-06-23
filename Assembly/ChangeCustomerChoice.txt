@@ -1,0 +1,69 @@
+
+    0x1277 <_Z20ChangeCustomerChoicev>      push   %rbp                                                                                                                          
+   │0x1278 <_Z20ChangeCustomerChoicev+1>    mov    %rsp,%rbp                                                                                                                     
+   │0x127b <_Z20ChangeCustomerChoicev+4>    lea    0x346(%rip),%rsi           # 0x15c8                                                                                              
+   │0x1282 <_Z20ChangeCustomerChoicev+11>   lea    0x200e17(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+
+// Cout << "enter the number of the client that you wish to change << endl;                                                                
+   │0x1289 <_Z20ChangeCustomerChoicev+18>   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>                                                           
+   │0x128e <_Z20ChangeCustomerChoicev+23>   lea    0x201063(%rip),%rsi        # 0x2022f8 <changechoice>                                                                          
+   │0x1295 <_Z20ChangeCustomerChoicev+30>   lea    0x200f24(%rip),%rdi        # 0x2021c0 <_ZSt3cin@@GLIBCXX_3.4>                                                                 
+   │0x129c <_Z20ChangeCustomerChoicev+37>   callq  0xc60 <_ZNSirsERi@plt>                                                                                                      
+   │0x12a1 <_Z20ChangeCustomerChoicev+42>   lea    0x358(%rip),%rsi        # 0x1600                                                                                              
+   │0x12a8 <_Z20ChangeCustomerChoicev+49>   lea    0x200df1(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>                                                                
+   │0x12af <_Z20ChangeCustomerChoicev+56>   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+
+// Please enter the client's new service choice (1 = Brokerage, 2 = Retirement)                                                           
+   │0x12b4 <_Z20ChangeCustomerChoicev+61>   lea    0x201041(%rip),%rsi        # 0x2022fc <newservice>                                                                            
+   │0x12bb <_Z20ChangeCustomerChoicev+68>   lea    0x200efe(%rip),%rdi        # 0x2021c0 <_ZSt3cin@@GLIBCXX_3.4>                                                                 
+   │0x12c2 <_Z20ChangeCustomerChoicev+75>   callq  0xc60 <_ZNSirsERi@plt>
+   │0x12c7 <_Z20ChangeCustomerChoicev+80>   mov    0x20102b(%rip),%eax        # 0x2022f8 <changechoice>
+ 
+if ( != 1; go to 105 )                                                        
+   │0x12cd <_Z20ChangeCustomerChoicev+86>   cmp    $0x1,%eax                                                                                                                     
+   │0x12d0 <_Z20ChangeCustomerChoicev+89>   jne    0x12e0 <_Z20ChangeCustomerChoicev+105>                                                                                        
+   │0x12d2 <_Z20ChangeCustomerChoicev+91>   mov    0x201024(%rip),%eax        # 0x2022fc <newservice>                                                                            
+   │0x12d8 <_Z20ChangeCustomerChoicev+97>   mov    %eax,0x200d82(%rip)        # 0x202060 <num1> 
+// go to +230                                                                                 
+   │0x12de <_Z20ChangeCustomerChoicev+103>  jmp    0x1342 <_Z20ChangeCustomerChoicev+203>                                                                                        
+   │0x12e0 <_Z20ChangeCustomerChoicev+105>  mov    0x201012(%rip),%eax        # 0x2022f8 <changechoice>
+
+if ( != 2; go to +130)                                                        
+   │0x12e6 <_Z20ChangeCustomerChoicev+111>  cmp    $0x2,%eax                                                                                                                     
+   │0x12e9 <_Z20ChangeCustomerChoicev+114>  jne    0x12f9 <_Z20ChangeCustomerChoicev+130>                                                                                        
+   │0x12eb <_Z20ChangeCustomerChoicev+116>  mov    0x20100b(%rip),%eax        # 0x2022fc <newservice>                                                                            
+   │0x12f1 <_Z20ChangeCustomerChoicev+122>  mov    %eax,0x200d6d(%rip)        # 0x202064 <num2>
+if ( == ; go to 203)                                                                                  
+   │0x12f7 <_Z20ChangeCustomerChoicev+128>  jmp    0x1342 <_Z20ChangeCustomerChoicev+203>                                                                                        
+
+   │0x12f9 <_Z20ChangeCustomerChoicev+130>  mov    0x200ff9(%rip),%eax        # 0x2022f8 <changechoice>
+if ( != 3; go to +155)
+   │0x12ff <_Z20ChangeCustomerChoicev+136>  cmp    $0x3,%eax                                                                                                                     
+   │0x1302 <_Z20ChangeCustomerChoicev+139>  jne    0x1312 <_Z20ChangeCustomerChoicev+155>                                                                                        
+   │0x1304 <_Z20ChangeCustomerChoicev+141>  mov    0x200ff2(%rip),%eax        # 0x2022fc <newservice>                                                                            
+   │0x130a <_Z20ChangeCustomerChoicev+147>  mov    %eax,0x200d58(%rip)        # 0x202068 <num3>
+
+if ( == ; go to +203)                                                                                  
+   │0x1310 <_Z20ChangeCustomerChoicev+153>  jmp    0x1342 <_Z20ChangeCustomerChoicev+203>                                                                                        
+   │0x1312 <_Z20ChangeCustomerChoicev+155>  mov    0x200fe0(%rip),%eax        # 0x2022f8 <changechoice>
+
+if ( != 4; go to +180 )                                                                          
+   │0x1318 <_Z20ChangeCustomerChoicev+161>  cmp    $0x4,%eax                                                                                                                     
+   │0x131b <_Z20ChangeCustomerChoicev+164>  jne    0x132b <_Z20ChangeCustomerChoicev+180>
+                                                                                        
+   │0x131d <_Z20ChangeCustomerChoicev+166>  mov    0x200fd9(%rip),%eax        # 0x2022fc <newservice>                                                                            
+   │0x1323 <_Z20ChangeCustomerChoicev+172>  mov    %eax,0x200d43(%rip)        # 0x20206c <num4>
+if (==; go to +203)                                                                                  
+   │0x1329 <_Z20ChangeCustomerChoicev+178>  jmp    0x1342 <_Z20ChangeCustomerChoicev+203>                                                                                        │
+   │0x132b <_Z20ChangeCustomerChoicev+180>  mov    0x200fc7(%rip),%eax        # 0x2022f8 <changechoice> 
+
+if ( != 5; go to +203 )                                                                  
+   │0x1331 <_Z20ChangeCustomerChoicev+186>  cmp    $0x5,%eax                                                                                                                     
+   │0x1334 <_Z20ChangeCustomerChoicev+189>  jne    0x1342 <_Z20ChangeCustomerChoicev+203>                                                                                        
+   │0x1336 <_Z20ChangeCustomerChoicev+191>  mov    0x200fc0(%rip),%eax        # 0x2022fc <newservice>                                                                            
+   │0x133c <_Z20ChangeCustomerChoicev+197>  mov    %eax,0x200d2e(%rip)        # 0x202070 <num5>
+// deallocate memory and return to main                                                                             
+   │0x1342 <_Z20ChangeCustomerChoicev+203>  nop                                                                                                                                  
+   │0x1343 <_Z20ChangeCustomerChoicev+204>  pop    %rbp
+# return to main +265                                                                                                                           
+   │0x1344 <_Z20ChangeCustomerChoicev+205>  retq       
